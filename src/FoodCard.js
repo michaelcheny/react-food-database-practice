@@ -22,12 +22,16 @@ export default function FoodCard({
       <h4 className="food-name">{name}</h4>
 
       {image ? (
-        <img src={image} alt={`${name} + ${category}`} />
+        <img className="food-image" src={image} alt={`${name} + ${category}`} />
       ) : (
-        <img src={noImg} alt={`${name} + ${category}`} />
+        <img className="food-image" src={noImg} alt={`${name} + ${category}`} />
       )}
 
-      {isShown ? <NutritionFacts nutrients={nutrients} /> : ""}
+      {isShown ? (
+        <NutritionFacts nutrients={nutrients} content={content} />
+      ) : (
+        ""
+      )}
     </div>
   );
 }

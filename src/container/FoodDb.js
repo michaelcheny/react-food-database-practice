@@ -18,7 +18,9 @@ export default function FoodDb() {
     setFoods([]);
     const res = await fetch(url);
     const data = await res.json();
+    console.log(data);
     setFoods(data.hints);
+    if (!data._links) return;
     setUrl(data._links.next.href);
   };
 
@@ -26,7 +28,11 @@ export default function FoodDb() {
     const res = await fetch(url);
     const data = await res.json();
     const newArr = foods.concat(data.hints);
-    setFoods(newArr);
+    const result = Array.from(new Set(newArr));
+    // to stop more fetching??? temporary fix need to find better solution
+    if (!data._links.next) return;
+    setFoods(result);
+    // setFoods(newArr);
     setUrl(data._links.next.href);
   };
 

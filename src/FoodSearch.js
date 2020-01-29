@@ -9,7 +9,7 @@ export default function SearchBar(props) {
   };
 
   const handleClick = e => {
-    if (e.target.value === "Search") return;
+    // if (e.target.value === "Search") return;
     setInput("");
   };
 
