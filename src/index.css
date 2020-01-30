@@ -13,6 +13,36 @@ code {
     monospace;
 }
 
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  background-color: rgba(0, 0, 0, 0.836);
+  color: white;
+  /* width: 100%;
+  padding: 20px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px; */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-routes {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.nav-routes:visited {
+  text-decoration: none;
+}
+
 .food-container {
 }
 
@@ -58,13 +88,4 @@ code {
   font-size: 18px;
   text-align: center;
   border-radius: 6px;
-}
-
-.navbar {
-  width: 100%;
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.836);
-  color: white;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
 }
